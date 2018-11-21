@@ -1,0 +1,4 @@
+maven_dest: /etc/maven/
+java_dest: /etc/java/
+
+git_repo: https://www.github.com/oshi/oshi.git
