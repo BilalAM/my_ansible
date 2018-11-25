@@ -1,2 +1,31 @@
 ---
 # tasks file for mavy_role
+
+#- name: check if maven is already present
+#  shell: mvn --version
+#  register: mvn_version_output
+
+#- name: Will only run if maven is present
+#  shell: echo "Maven is currently installed"
+#  when: mvn_version_output.stdout.find('maven') != -1
+
+#- name: Will only run if maven is not present
+#  when: mvn_version_output.stdout.find('maven') == -1
+#  shell: echo "Maven not found .. installing maven..."
+
+#- name: get installed packages facts
+#  package_facts:
+#    manager: apt
+
+- include_vars: vars/mavy-vars.yml
+- name: Downloading maven binary in /var/ folder.
+  become: yes
+  get_url:
+    url: https://www-eu.apache.org/dist/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.tar.gz
+    dest: /var/maven-3.6.0-bin.tar.gz
+
+- name: Copying maven binary to a seperate folder.
+  shell : 
+   
+#  when: '"maven" not in ansible_facts.packages'
+    

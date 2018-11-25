@@ -1,0 +1,5 @@
+---
+# vars file for mavy_role
+maven_download_dir: "/var/apache-maven.tar.gz"
+maven_download_url: "https://www-eu.apache.org/dist/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.tar.gz"
+maven_extracted_path: "/opt/maven/"

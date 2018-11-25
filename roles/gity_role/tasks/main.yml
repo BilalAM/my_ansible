@@ -1,3 +1,5 @@
 ---
 - name: hello
-  shell: "echo"
+  service:
+    name: ssh
+    state: started
